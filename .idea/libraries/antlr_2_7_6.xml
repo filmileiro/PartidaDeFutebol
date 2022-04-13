@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="antlr-2.7.6">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Bibliotecas/antlr-2.7.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Bibliotecas/asm-attrs.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Bibliotecas/asm.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Bibliotecas/c3p0-0.9.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Bibliotecas/cglib-2.1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Bibliotecas/commons-collections-2.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Bibliotecas/commons-logging-1.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Bibliotecas/dom4j-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Bibliotecas/ehcache-1.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Bibliotecas/hibernate3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Bibliotecas/jdbc2_0-stdext.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Bibliotecas/jta.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Bibliotecas/log4j-1.2.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Bibliotecas/mysql-connector-java-5.1.20-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Bibliotecas/xerces-2.6.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
