@@ -9,8 +9,8 @@ public class PartidaDeFutebol {
     private String NomeDoTimeVisitante;
     private Integer QuantidadeDeJogadoresA;
     private Integer QuantidadeDeJogadoresB;
-    private Integer GolTimeA = 0;
-    private Integer GolTimeB = 0;
+    private Integer PlacarA = 0;
+    private Integer PlacarB = 0;
 
     Random ApitoDoJuiz = new Random();
     private Integer Acoes;
@@ -49,12 +49,12 @@ public class PartidaDeFutebol {
             case 1:
                 System.out.printf("GOOOOOOL!! DO %s !!!!", NomeDoTimeMandante.toUpperCase(Locale.ROOT));
                 System.out.println();
-                GolTimeA++;
+                PlacarA++;
                 break;
             case 2:
                 System.out.printf("GOOOOOOL!! DO %s !!!!", NomeDoTimeVisitante.toUpperCase(Locale.ROOT));
                 System.out.println();
-                GolTimeB++;
+                PlacarB++;
                 break;
             case 3:
                 System.out.printf("FALTA DO %s !!!!", NomeDoTimeMandante.toUpperCase(Locale.ROOT));
@@ -99,25 +99,23 @@ public class PartidaDeFutebol {
 
                 Acoes = ApitoDoJuiz.nextInt(10)+1;
                 System.out.println();
-                System.out.println( i + " MINUTOS DO PRIMEIRO TEMPO");
+                System.out.println( i + 2 + " MINUTOS DO PRIMEIRO TEMPO");
 
-                if (i + 1 == 1){
-                    System.out.println("COMEÇA O JOGO!!");
-                }else {
+
                     resumoDaPartida();
-                }
+
             }
+            System.out.println();
             System.out.println("FIM DO PRIMEIRO TEMPO.");
         }
 
 
     }
-
     public String resumoDoJogo(){
-        if (GolTimeA == GolTimeA) {
-            return String.format("Tudo igual no %s, %s %d x %d %s", LocalDoJogo, NomeDoTimeMandante, GolTimeA, GolTimeB, NomeDoTimeVisitante);
+        if (PlacarA.equals(PlacarB)) {
+            return String.format("%Tudo igual no %s, %s %d x %d %s%n", LocalDoJogo, NomeDoTimeMandante, PlacarA, PlacarB, NomeDoTimeVisitante);
         }else {
-            return String.format("%n%nPLACAR ATUAL É: %s %d X %d %s%n", NomeDoTimeMandante.toUpperCase(Locale.ROOT), GolTimeA, GolTimeB, NomeDoTimeVisitante.toUpperCase(Locale.ROOT));
+            return String.format("%%nPLACAR ATUAL É: %s %d X %d %s%n", NomeDoTimeMandante.toUpperCase(Locale.ROOT), PlacarA, PlacarB, NomeDoTimeVisitante.toUpperCase(Locale.ROOT));
         }
     }
 
