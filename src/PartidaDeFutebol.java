@@ -44,82 +44,81 @@ public class PartidaDeFutebol {
             System.out.println("-------------//----------------");
         }
     }
+    public void resumoDaPartida(){
+        switch (Acoes){
+            case 1:
+                System.out.printf("GOOOOOOL!! DO %s !!!!", NomeDoTimeMandante.toUpperCase(Locale.ROOT));
+                System.out.println();
+                GolTimeA++;
+                break;
+            case 2:
+                System.out.printf("GOOOOOOL!! DO %s !!!!", NomeDoTimeVisitante.toUpperCase(Locale.ROOT));
+                System.out.println();
+                GolTimeB++;
+                break;
+            case 3:
+                System.out.printf("FALTA DO %s !!!!", NomeDoTimeMandante.toUpperCase(Locale.ROOT));
+                System.out.println();
+                break;
+            case 4:
+                System.out.printf("FALTA DO %s !!!!", NomeDoTimeVisitante.toUpperCase(Locale.ROOT));
+                System.out.println();
+                break;
+            case 5:
+                System.out.printf("LATERAL PARA O %s !!!!", NomeDoTimeMandante.toUpperCase(Locale.ROOT));
+                System.out.println();
+                break;
+            case 6:
+                System.out.printf("LATERAL PARA O %s !!!!", NomeDoTimeVisitante.toUpperCase(Locale.ROOT));
+                System.out.println();
+                break;
+            case 7:
+                System.out.printf("IMPEDIMENTO PARA O %s !!!!", NomeDoTimeMandante.toUpperCase(Locale.ROOT));
+                System.out.println();
+                break;
+            case 8:
+                System.out.printf("IMPEDIMENTO PARA O %s !!!!", NomeDoTimeVisitante.toUpperCase(Locale.ROOT));
+                System.out.println();
+                break;
+            case 9:
+                System.out.printf("CHUTOU PRA FORA! INACREDITAVEL FUTEBOL CLUBE!!");
+                System.out.println();
+                break;
 
+            default:
+                System.out.println("JUIZ VAI TER QUE VER NO VAR!!");
+    }
+
+
+    }
     public void iniarPrimeitoTempo(){
         if ((QuantidadeDeJogadoresA > 7 && QuantidadeDeJogadoresA<=11) && (QuantidadeDeJogadoresB > 7 && QuantidadeDeJogadoresB <= 11)){
             System.out.println();
-            System.out.println("APITA O ARBITRO!!!");
+            System.out.println("COMEÇA O PRIMEIRO TEMPO");
             for (int i = 0; i < 45 ; i+=3) {
 
+                Acoes = ApitoDoJuiz.nextInt(10)+1;
+                System.out.println();
+                System.out.println( i + " MINUTOS DO PRIMEIRO TEMPO");
+
                 if (i + 1 == 1){
-                    System.out.println("COMEÇA O PRIMEIRO TEMPO!!");
-                }else{
-                    Acoes = ApitoDoJuiz.nextInt(10)+1;
-                    System.out.println();
-                    System.out.println( i + " MINUTOS DO PRIMEIRO TEMPO");
-                    switch (Acoes){
-                        case 1:
-                            System.out.printf("GOOOOOOL!! DO %s !!!!", NomeDoTimeMandante.toUpperCase(Locale.ROOT));
-                            System.out.println();
-                            GolTimeA++;
-                            break;
-                        case 2:
-                            System.out.printf("GOOOOOOL!! DO %s !!!!", NomeDoTimeVisitante.toUpperCase(Locale.ROOT));
-                            System.out.println();
-                            GolTimeB++;
-                            break;
-                        case 3:
-                            System.out.printf("FALTA DO %s !!!!", NomeDoTimeMandante.toUpperCase(Locale.ROOT));
-                            System.out.println();
-                            break;
-                        case 4:
-                            System.out.printf("FALTA DO %s !!!!", NomeDoTimeVisitante.toUpperCase(Locale.ROOT));
-                            System.out.println();
-                            break;
-                        case 5:
-                            System.out.printf("LATERAL PARA O %s !!!!", NomeDoTimeMandante.toUpperCase(Locale.ROOT));
-                            System.out.println();
-                            break;
-                        case 6:
-                            System.out.printf("LATERAL PARA O %s !!!!", NomeDoTimeVisitante.toUpperCase(Locale.ROOT));
-                            System.out.println();
-                            break;
-                        case 7:
-                            System.out.printf("IMPEDIMENTO PARA O %s !!!!", NomeDoTimeMandante.toUpperCase(Locale.ROOT));
-                            System.out.println();
-                            break;
-                        case 8:
-                            System.out.printf("IMPEDIMENTO PARA O %s !!!!", NomeDoTimeVisitante.toUpperCase(Locale.ROOT));
-                            System.out.println();
-                            break;
-                        case 9:
-                            System.out.printf("CHUTOU PRA FORA! INACREDITAVEL FUTEBOL CLUBE!!");
-                            System.out.println();
-                            break;
-
-                        default:
-                            System.out.println("JUIZ VAI TER QUE VER NO VAR!!");
-                            break;
-
-
-                    }
+                    System.out.println("COMEÇA O JOGO!!");
+                }else {
+                    resumoDaPartida();
                 }
-
             }
-            System.out.println();
-            System.out.println("FIM DO PRIMEIRO TEMPO!");
-            System.out.println();
-            System.out.println();
-            System.out.println("------------------------------------------");
-            System.out.printf("PLACAR ATUAL É: %s %d X %d %s%n", NomeDoTimeMandante.toUpperCase(Locale.ROOT), GolTimeA, GolTimeB, NomeDoTimeVisitante.toUpperCase(Locale.ROOT));
-            System.out.println("------------------------------------------");
-            System.out.println();
-            System.out.println();
-
-
-
+            System.out.println("FIM DO PRIMEIRO TEMPO.");
         }
+
+
     }
 
+    public String resumoDoJogo(){
+        if (GolTimeA == GolTimeA) {
+            return String.format("Tudo igual no %s, %s %d x %d %s", LocalDoJogo, NomeDoTimeMandante, GolTimeA, GolTimeB, NomeDoTimeVisitante);
+        }else {
+            return String.format("%n%nPLACAR ATUAL É: %s %d X %d %s%n", NomeDoTimeMandante.toUpperCase(Locale.ROOT), GolTimeA, GolTimeB, NomeDoTimeVisitante.toUpperCase(Locale.ROOT));
+        }
+    }
 
 }
