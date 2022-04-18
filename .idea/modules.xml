@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PrimeiroHibernate.iml" filepath="$PROJECT_DIR$/PrimeiroHibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DesafioJogoDeFutebol.iml" filepath="$PROJECT_DIR$/DesafioJogoDeFutebol.iml" />
     </modules>
   </component>
 </project>
