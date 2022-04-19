@@ -32,17 +32,7 @@ public class PartidaDeFutebol {
         sc.close();
     }
     public void verificaStatusDaPartida(){
-        if (QuantidadeDeJogadoresA <= 7){
-            System.out.printf("%nA regra é clara! Quando a quantidade de jogadores é 7 ou menos que 7 o " +
-                    "juiz não altoriza o inicio do Jogo. então... O %s perde o jogo.%n", this.NomeDoTimeMandante);
-        }else if(QuantidadeDeJogadoresB <= 7){
-            System.out.printf("%nA regra é clara! Quando a quantidade de jogadores é 7 ou menos que 7 o " +
-                    "juiz não altoriza o inicio do Jogo. então... O %s perde o jogo.%n", this.NomeDoTimeVisitante);
-        }else{
-            System.out.printf("%nTudo pronto para começar o Primeiro tempo%n");
-            System.out.println();
-            System.out.println("-------------//----------------");
-        }
+        //Vou fazer uma mudanças aqui por conta da escalação do time.
     }
     public void resumoDaPartida(){
         switch (Acoes){
@@ -115,7 +105,7 @@ public class PartidaDeFutebol {
         if (PlacarA.equals(PlacarB)) {
             return String.format("%Tudo igual no %s, %s %d x %d %s%n", LocalDoJogo, NomeDoTimeMandante, PlacarA, PlacarB, NomeDoTimeVisitante);
         }else {
-            return String.format("%%nPLACAR ATUAL É: %s %d X %d %s%n", NomeDoTimeMandante.toUpperCase(Locale.ROOT), PlacarA, PlacarB, NomeDoTimeVisitante.toUpperCase(Locale.ROOT));
+            return String.format("%nPLACAR ATUAL É: %s %d X %d %s%n", NomeDoTimeMandante.toUpperCase(Locale.ROOT), PlacarA, PlacarB, NomeDoTimeVisitante.toUpperCase(Locale.ROOT));
         }
     }
 
